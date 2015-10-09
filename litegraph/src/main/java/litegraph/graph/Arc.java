@@ -9,6 +9,26 @@ package litegraph.graph;
  *
  * @author Florian
  */
-public class Arc {
+public class Arc extends GraphElement {
+
+    private Vertex source;
+    private Vertex destination;
+
+    public enum Direction {
+        BOTH, INCOMING, OUTGOING, LOOP;
+    }
+    
+    public Arc(Vertex src, Vertex dest){
+        this.source = src;
+        this.destination = dest;
+    }
+
+    public Vertex getSource() {
+        return source;
+    }
+
+    public Vertex getDestination() {
+        return destination;
+    }
     
 }
